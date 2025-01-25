@@ -1559,7 +1559,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_69
+      name: but
       rect:
         serializedVersion: 2
         x: 144
@@ -1580,7 +1580,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_70
+      name: but1
       rect:
         serializedVersion: 2
         x: 160
@@ -1601,7 +1601,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_71
+      name: but3
       rect:
         serializedVersion: 2
         x: 176
@@ -5102,10 +5102,7 @@ TextureImporter:
       GUI_66: 1272580632
       GUI_67: 1518138573
       GUI_68: -583753960
-      GUI_69: -1919363775
       GUI_7: -664116145
-      GUI_70: -1546230858
-      GUI_71: 481943257
       GUI_72: 879147094
       GUI_73: 639616791
       GUI_74: -279782573
@@ -5136,6 +5133,9 @@ TextureImporter:
       GUI_97: 1346116254
       GUI_98: 2132258183
       GUI_99: 558844633
+      but: -1919363775
+      but1: -1546230858
+      but3: 481943257
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
