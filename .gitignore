@@ -71,3 +71,15 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Ignore Unity-specific files
+/Library/
+/obj/
+/Temp/
+/Build/
+/Builds/
+.vs/
+.idea/
+
+# Unity Package Cache (ignoring entire directory to prevent conflicts)
+Library/PackageCache/
