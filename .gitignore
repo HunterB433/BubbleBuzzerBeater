@@ -79,3 +79,7 @@ crashlytics-build.properties
 /Build/
 /Builds/
 .vs/
+.idea/
+
+# Unity Package Cache (ignoring entire directory to prevent conflicts)
+Library/PackageCache/
