@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +9,10 @@ public class BlowingScript : MonoBehaviour
     private Slider blowingMeter;
     [SerializeField]
     private Image thresholdUI;
+    [SerializeField]
+    private GameObject bubble;
+    [SerializeField]
+    private GameObject wellDoneText;
     public float threshold;
 
     // microphone stuff
@@ -57,11 +61,14 @@ public class BlowingScript : MonoBehaviour
         blowingMeter.value = loudness;
 
         // Here you can trigger events based on the loudness value (blowing strength)
-        if (loudness > threshold) // Adjust threshold as needed
-        {
-            thresholdUI.color = Color.green;
-            Debug.Log("threshold reached!");
-        }
+            if (loudness > threshold) // Adjust threshold as needed
+            {
+                thresholdUI.color = Color.green;
+                Debug.Log("Threshold reached for the required time!");
+                // Trigger whatever event you want here
+                bubble.SetActive(true);
+                StartCoroutine(SayWellDone());
+            }
         }
     }
 
@@ -81,5 +88,12 @@ public class BlowingScript : MonoBehaviour
         //loudness *= 0.5f; // Adjust this factor as needed
 
         return loudness;
+    }
+
+    IEnumerator SayWellDone()
+    {
+        yield return new WaitForSeconds(2);
+
+        wellDoneText.SetActive(true);
     }
 }

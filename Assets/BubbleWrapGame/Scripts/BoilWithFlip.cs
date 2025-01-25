@@ -7,6 +7,8 @@ public class BoilWithFlip : MonoBehaviour
     public List<Sprite> spriteList2;  // Second list of sprites
 
     public float changeSpeed = 1f;  // Speed at which the sprite changes
+    public float spawnChance = 1f / 6f;  // Chance to start with spriteList2 (default 1/6)
+
     private SpriteRenderer spriteRenderer;
     private int currentSpriteIndex = 0;
 
@@ -20,6 +22,16 @@ public class BoilWithFlip : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         mainCam = Camera.main;
+
+        // Determine which list to start with based on the spawn chance
+        if (Random.value < spawnChance)
+        {
+            currentListIndex = 1;  // Use spriteList2
+        }
+        else
+        {
+            currentListIndex = 0;  // Use spriteList1
+        }
 
         // Set the initial list
         SetCurrentList();
@@ -62,6 +74,10 @@ public class BoilWithFlip : MonoBehaviour
         {
             currentList = spriteList2;
         }
+
+        // Set the initial sprite
+        currentSpriteIndex = 0;
+        spriteRenderer.sprite = currentList[currentSpriteIndex];
     }
 
     // Toggle between the two lists
@@ -69,7 +85,5 @@ public class BoilWithFlip : MonoBehaviour
     {
         currentListIndex = (currentListIndex + 1) % 2;  // Switch between 0 and 1
         SetCurrentList();  // Update the current list reference
-        currentSpriteIndex = 0;  // Reset sprite index when switching lists
-        spriteRenderer.sprite = currentList[currentSpriteIndex];  // Update sprite
     }
 }
