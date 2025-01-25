@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class BackgroundMove : MonoBehaviour
 {
-    
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float scrollSpeed = 0.01f;
+    [SerializeField] private bool horizontalScrolling = true;
 
-    
-    void Update()
+    private Material backgroundMaterial;
+
+    private void Start()
     {
+        backgroundMaterial = GetComponent<Renderer>().material;
+    }
+    private void Update()
+    {
+        float offset = Time.time * scrollSpeed;
+
+        // check for errors
+        if (horizontalScrolling)
+        {
+            backgroundMaterial.mainTextureOffset = new Vector2(-offset, 0);
+        }
         
     }
 }
