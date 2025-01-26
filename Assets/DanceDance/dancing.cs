@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class dancing : MonoBehaviour
 {
-    private Animator animator;
-
-    void Start()
-    {
-        // Get the Animator component attached to the player
-        animator = GetComponent<Animator>();
-    }
+    public GameObject player;
 
     void Update()
     {
-        // Check if the W key is pressed
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown("w"))
         {
-            // Trigger the "MoveUp" animation
-            animator.SetTrigger("Dance2_Frame1");
+            player.GetComponent<Animator>().Play("wiggle");
+        }
+        else if (Input.GetKeyDown("e"))
+        {
+            player.GetComponent<Animator>().Play("dancingqueen");
+        }
+        else if (Input.GetKeyDown("q"))
+        {
+            player.GetComponent<Animator>().Play("kicking");
         }
     }
 }
