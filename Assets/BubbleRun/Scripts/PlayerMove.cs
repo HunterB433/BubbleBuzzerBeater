@@ -12,12 +12,14 @@ public class PlayerMove : MonoBehaviour
     {
         // Get player input
         float moveY = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
+        float moveX = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
 
         // Move the player
-        Vector3 movePlayer = transform.position + new Vector3(0, moveY, 0);
+        Vector3 movePlayer = transform.position + new Vector3(moveX, moveY, 0);
 
         // Clamp the background (cannt go past boundaries)
         movePlayer.y = Mathf.Clamp(movePlayer.y, boundaryMin.y, boundaryMax.y);
+        movePlayer.x = Mathf.Clamp(movePlayer.x, boundaryMin.x, boundaryMax.x);
 
         // Apply the position
         transform.position = movePlayer;
