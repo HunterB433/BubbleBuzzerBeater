@@ -2547,6 +2547,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594821438}
   - component: {fileID: 1594821437}
+  - component: {fileID: 1594821439}
   m_Layer: 0
   m_Name: empty
   m_TagString: Untagged
@@ -2570,6 +2571,8 @@ MonoBehaviour:
   bubbleCountText: {fileID: 1274451093}
   targetText: {fileID: 1175287924}
   keyDisplayText: {fileID: 1153596769}
+  bubbleCount: 0
+  targetBubbleCount: 0
 --- !u!4 &1594821438
 Transform:
   m_ObjectHideFlags: 0
@@ -2585,6 +2588,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594821439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594821436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341c9e0d5b1254abfaf7d47ebd7dc58e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1703133619
 GameObject:
   m_ObjectHideFlags: 0

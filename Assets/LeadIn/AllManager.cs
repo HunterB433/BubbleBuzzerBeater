@@ -29,6 +29,8 @@ public class AllManager : MonoBehaviour
 
     public bool winned = true;
 
+    public Texture2D rollerCoasterImage;
+
     private void Awake()
     {
         // Singleton pattern to prevent duplicates
@@ -59,6 +61,7 @@ public class AllManager : MonoBehaviour
                 lives--;
                 if (lives == 0)
                 {
+                    SceneManager.LoadScene("EndScreen");
                     Debug.Log("Outta Lives");
                 }
             }

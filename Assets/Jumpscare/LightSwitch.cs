@@ -147,6 +147,8 @@ public class LightSwitch : MonoBehaviour
                 monsterUpstairs.SetActive(true);
 
                 // take picture here
+                StartCoroutine(TakePicture());
+
                 EndGame();
             }
         }
@@ -163,13 +165,8 @@ public class LightSwitch : MonoBehaviour
 
     IEnumerator EndGameScene()
     {
-        yield return new WaitForSeconds(1);
-
-        image.SetActive(true);
-
-        Capture();
-
         yield return new WaitForSeconds(3);
+
         SceneManager.LoadScene("LeadIn");
     }
 
@@ -184,6 +181,7 @@ public class LightSwitch : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         // save picture here ?
+        AllManager.Instance.rollerCoasterImage = texture;
 
         // To avoid memory leaks
         Destroy(texture);
@@ -203,5 +201,14 @@ public class LightSwitch : MonoBehaviour
         {
             webcamTexture.Stop();
         }
+    }
+
+    IEnumerator TakePicture()
+    {
+        yield return new WaitForSeconds(1);
+
+        image.SetActive(true);
+
+        Capture();
     }
 }
