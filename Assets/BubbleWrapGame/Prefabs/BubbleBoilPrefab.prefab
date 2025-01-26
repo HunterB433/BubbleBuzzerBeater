@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8908551056829410888}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.0053932494, z: -0, w: 0.99998546}
-  m_LocalPosition: {x: -2.35, y: 0.1, z: -1.97}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0.618, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1351050733907874890
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -108,8 +108,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 27c95dd73755b104e8b00a0e93aed496, type: 3}
   - {fileID: 21300000, guid: 45ca4e1f227c3ec40a41d5462fd1059b, type: 3}
   - {fileID: 21300000, guid: 3455fb9bf80ff0a4ba2294d361dde742, type: 3}
-  changeSpeed: 0.25
+  changeSpeed: 1
   spawnChance: 0.25
+  bubWinManager: {fileID: 5304594290021601072, guid: 6bb12c299c300a0469d20e5756cf706d, type: 3}
 --- !u!58 &1162894904209282763
 CircleCollider2D:
   m_ObjectHideFlags: 0
