@@ -1265,6 +1265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d008f305153854f4ea0ebe6e38b874aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 2877328420276019661, guid: 425746d9ed1a07046b8b46b5fa9f596b, type: 3}
+  spawnLocation: {x: -6, y: 4, z: -1}
+  checkDelay: 5
 --- !u!4 &711614629
 Transform:
   m_ObjectHideFlags: 0
@@ -3658,6 +3661,18 @@ PrefabInstance:
     - target: {fileID: 5304594290021601072, guid: 6bb12c299c300a0469d20e5756cf706d, type: 3}
       propertyPath: score
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304594290021601072, guid: 6bb12c299c300a0469d20e5756cf706d, type: 3}
+      propertyPath: spawnLocation.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304594290021601072, guid: 6bb12c299c300a0469d20e5756cf706d, type: 3}
+      propertyPath: spawnLocation.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5304594290021601072, guid: 6bb12c299c300a0469d20e5756cf706d, type: 3}
+      propertyPath: spawnLocation.z
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
