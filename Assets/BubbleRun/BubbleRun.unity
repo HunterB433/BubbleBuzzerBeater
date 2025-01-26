@@ -415,9 +415,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToSpawn: {fileID: 3711721467799876344, guid: 76a5f9271d745b74e9ebfb82d764f2ff, type: 3}
-  numOfObjects: 5
+  numOfObjects: 6
   spawnPosition: {x: 0, y: 0, z: -5}
-  spawnRange: 4
+  spawnRange: 3
 --- !u!114 &1619577061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,11 +818,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3095460262442129385, guid: 76a5f9271d745b74e9ebfb82d764f2ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -8.03
       objectReference: {fileID: 0}
     - target: {fileID: 3095460262442129385, guid: 76a5f9271d745b74e9ebfb82d764f2ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.96
+      value: 4.24
       objectReference: {fileID: 0}
     - target: {fileID: 3095460262442129385, guid: 76a5f9271d745b74e9ebfb82d764f2ff, type: 3}
       propertyPath: m_LocalPosition.z

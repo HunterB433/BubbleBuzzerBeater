@@ -58,15 +58,22 @@ public class AllManager : MonoBehaviour
         {
             if (!winned)
             {
+                winned = true;
                 lives--;
                 if (lives == 0)
                 {
                     SceneManager.LoadScene("EndScreen");
                     Debug.Log("Outta Lives");
                 }
+
+
             }
-            LoadNextMiniGameWithDelay(1f);
-            UpdateHearts();
+            
+            if (lives != 0)
+            { 
+                LoadNextMiniGameWithDelay(1f);
+                UpdateHearts();
+            }
         }
 
         else if (scene.name == "BubbleWrap")
@@ -78,6 +85,30 @@ public class AllManager : MonoBehaviour
         else if (scene.name == "TypingGame")
         {
             List<int> popupSequence = new List<int> { 2, 3 };
+            ShowPopupsSequentially(popupSequence);
+        }
+
+        else if (scene.name == "BubbleRun")
+        {
+            List<int> popupSequence = new List<int> { 4, 5 };
+            ShowPopupsSequentially(popupSequence);
+        }
+
+        else if (scene.name == "JumpScare")
+        {
+            List<int> popupSequence = new List<int> { 6, 7 };
+            ShowPopupsSequentially(popupSequence);
+        }
+
+        else if (scene.name == "DanceDance")
+        {
+            List<int> popupSequence = new List<int> { 8, 9 };
+            ShowPopupsSequentially(popupSequence);
+        }
+
+        else if (scene.name == "BubbleBlowing")
+        {
+            List<int> popupSequence = new List<int> { 10, 11 };
             ShowPopupsSequentially(popupSequence);
         }
     }
