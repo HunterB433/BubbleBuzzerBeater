@@ -267,6 +267,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 1417658915}
   textBox: {fileID: 1994370945}
+  objectToSpawn: {fileID: 2877328420276019661, guid: 425746d9ed1a07046b8b46b5fa9f596b, type: 3}
+  spawnLocation: {x: -10, y: 2, z: -1}
+  checkDelay: 5
 --- !u!1 &584647540
 GameObject:
   m_ObjectHideFlags: 0
