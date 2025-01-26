@@ -6,18 +6,18 @@ public class BubWinManager : MonoBehaviour
 {
     // Start is called before the first frame update
     private int score = 0;
-    private SceneTransitionManager sceneTransitionManager;
+    private AllManager allManager;
 
     void Start()
     {
         //score = 0;
         //Manually find the SceneTransitionManager in the scene
-        sceneTransitionManager = FindObjectOfType<SceneTransitionManager>();
+        allManager = FindObjectOfType<AllManager>();
 
         // Check if the manager is found
-        if (sceneTransitionManager == null)
+        if (allManager == null)
         {
-            Debug.LogError("SceneTransitionManager not found in the scene.");
+            Debug.LogError("allManager not found in the scene.");
         }
     }
 
@@ -27,7 +27,7 @@ public class BubWinManager : MonoBehaviour
     {
         if (score == 16)
         {
-            sceneTransitionManager.LoadMainMenu();
+            allManager.LoadMainMenu();
         }
     }
 
