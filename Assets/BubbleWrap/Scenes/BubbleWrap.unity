@@ -599,6 +599,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -1114,6 +1122,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -1321,6 +1337,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -1482,6 +1506,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -1549,6 +1581,14 @@ PrefabInstance:
     - target: {fileID: 277808334773817434, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
@@ -1726,6 +1766,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -1793,6 +1841,14 @@ PrefabInstance:
     - target: {fileID: 277808334773817434, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
@@ -2071,6 +2127,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -2140,6 +2204,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -2207,6 +2279,14 @@ PrefabInstance:
     - target: {fileID: 277808334773817434, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
@@ -2383,6 +2463,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -2557,6 +2645,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -2626,6 +2722,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
       value: 
       objectReference: {fileID: 711614628}
@@ -2693,6 +2797,14 @@ PrefabInstance:
     - target: {fileID: 277808334773817434, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
@@ -2867,6 +2979,14 @@ PrefabInstance:
     - target: {fileID: 277808334773817434, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager
@@ -3461,6 +3581,14 @@ PrefabInstance:
     - target: {fileID: 277808334773817434, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: changeSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
+      propertyPath: spawnChance
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 2907998993887447100, guid: 6a3303ae9fc8fc947b2eb0d57d901840, type: 3}
       propertyPath: bubWinManager

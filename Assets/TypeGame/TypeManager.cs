@@ -1,11 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI; // Add this if you're using Unity's built-in UI Text
-// or 
-using TMPro; // Add this if you're using TextMeshPro
-
-using System;
+using TMPro;
 using System.Collections;
-using System.Collections.Generic;
 
 public class TypeManager : MonoBehaviour
 {
@@ -15,6 +10,12 @@ public class TypeManager : MonoBehaviour
     // Reference to the Text or TMP_Text component
     public Canvas canvas;
     public TMP_Text textBox;  // Use 'TMP_Text' if you're using TextMeshPro instead of 'Text'
+    public GameObject objectToSpawn;  // Reference to the GameObject you want to spawn
+
+    // Variable for the spawn location
+    public Vector3 spawnLocation = Vector3.zero;  // Default location is (0, 0, 0)
+
+    public float checkDelay = 5f;  // Time to wait before checking the score (default is 5 seconds)
 
     void Start()
     {
@@ -33,28 +34,11 @@ public class TypeManager : MonoBehaviour
             Debug.LogError("Text box is not assigned in the inspector!");
         }
 
+        // Initially disable the Canvas
         canvas.gameObject.SetActive(false);
 
+        // Start the coroutine to enable the Canvas after 2 seconds
         StartCoroutine(EnableCanvasAfterDelay(2f));
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (textBox != null)
-        {
-            // Update score based on the character count in the text box
-            score = textBox.text.Length;
-
-            // Log or use score as needed (e.g., display it in the UI)
-            Debug.Log("Character count: " + score);
-
-            // Trigger action if score reaches 80
-            if (score >= 80)
-            {
-                allManager.LoadMainMenu();
-            }
-        }
     }
 
     private IEnumerator EnableCanvasAfterDelay(float delay)
@@ -64,5 +48,40 @@ public class TypeManager : MonoBehaviour
 
         // Re-enable the Canvas
         canvas.gameObject.SetActive(true);
+
+        // Start the second coroutine to spawn an object and check score after a delay
+        StartCoroutine(SpawnObjectAndCheckScore());
+    }
+
+    private IEnumerator SpawnObjectAndCheckScore()
+    {
+        Debug.Log("Here");
+
+        // Spawn the object at the specified spawn location
+        if (objectToSpawn != null)
+        {
+            Instantiate(objectToSpawn, spawnLocation, Quaternion.identity); // Use spawnLocation
+            Debug.Log("Object spawned at: " + spawnLocation);
+        }
+
+        // Wait for the specified check delay before spawning the object
+        yield return new WaitForSeconds(checkDelay);
+
+        // Now, check the score
+        if (textBox != null)
+        {
+            score = textBox.text.Length;  // Update score based on text box length
+            Debug.Log("Character count: " + score);
+
+            // Trigger action if score reaches 80
+            if (score >= 80)
+            {
+                allManager.LoadMainMenu();
+            }
+            else
+            {
+                Debug.Log("Failed");
+            }
+        }
     }
 }
