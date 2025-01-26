@@ -4,23 +4,25 @@ using UnityEngine;
 
 public class BubblePop : MonoBehaviour
 {
-    
-    private int score = 0;
-    void OnTriggerEnter(Collider bubble)
+    public BubbleRunWinner bubbleRunWinner;
+
+    void Start()
     {
-        // check if player is the collider
-        if (bubble.gameObject.CompareTag("Player"))
+        bubbleRunWinner = FindObjectOfType<BubbleRunWinner>();
+        if (bubbleRunWinner == null)
         {
-            Destroy(gameObject);
-            score++;
+            Debug.LogError("BubbleRunWinner not found in the scene.");
         }
     }
 
-    public int GetscoreBR()
+    void OnTriggerEnter(Collider bubble)
     {
-        return score;
+        if (bubble.gameObject.CompareTag("Player"))
+        {
+            bubbleRunWinner.scoreBR++;
+            Debug.Log("Score updated to: " + bubbleRunWinner.scoreBR);
+            Destroy(gameObject);
+            Debug.Log("Bubble destroyed");
+        }
     }
-
-
-
 }
