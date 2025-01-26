@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class BoilWithFlip : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class BoilWithFlip : MonoBehaviour
     public float changeSpeed = 1f;  // Speed at which the sprite changes
     public float spawnChance = 1f / 6f;  // Chance to start with spriteList2 (default 1/6)
 
+    public BubWinManager bubWinManager;
+    
     private SpriteRenderer spriteRenderer;
     private int currentSpriteIndex = 0;
 
@@ -23,14 +26,12 @@ public class BoilWithFlip : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         mainCam = Camera.main;
 
+        currentListIndex = 0;
+
         // Determine which list to start with based on the spawn chance
         if (Random.value < spawnChance)
         {
-            currentListIndex = 1;  // Use spriteList2
-        }
-        else
-        {
-            currentListIndex = 0;  // Use spriteList1
+            ToggleSpriteList();
         }
 
         // Set the initial list
@@ -83,7 +84,11 @@ public class BoilWithFlip : MonoBehaviour
     // Toggle between the two lists
     void ToggleSpriteList()
     {
-        currentListIndex = (currentListIndex + 1) % 2;  // Switch between 0 and 1
-        SetCurrentList();  // Update the current list reference
+        if (currentListIndex == 0)
+        {
+            bubWinManager.IncrementScore();
+            currentListIndex = 1;  // Switch between 0 and 1
+            SetCurrentList();  // Update the current list reference
+        }
     }
 }

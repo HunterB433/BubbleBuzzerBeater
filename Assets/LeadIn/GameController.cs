@@ -1,61 +1,66 @@
-// using UnityEngine;
+using UnityEngine;
 
-// public class GameController : MonoBehaviour
-// {
-//     private static GameController instance;
+public class GameController : MonoBehaviour
+{
+    private static GameController instance;
 
-//     public PopupManager popupManager;
-//     public SceneTransitionManager sceneTransitionManager;
-//     public int score = 0;
-//     public int lives = 3;
+    public PopupManager popupManager;
+    public SceneTransitionManager sceneTransitionManager;
+    public int score = 0;
+    public int lives = 3;
 
-//     void Awake()
-//     {
-//         // Check if an instance already exists
-//         if (instance != null && instance != this)
-//         {
-//             Destroy(gameObject); // Destroy duplicate
-//             return;
-//         }
+    private HeartDisplay heartDisplay;
 
-//         instance = this;
-//         DontDestroyOnLoad(gameObject); // Make this GameObject persist across scenes
-//     }
+    void Awake()
+    {
+        // Check if an instance already exists
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate
+            return;
+        }
 
-//     // Add your other GameController logic here
+        instance = this;
+        DontDestroyOnLoad(gameObject); // Make this GameObject persist across scenes
+    }
 
-//     private void Start()
-//     {
-//         // Initialize game state
-//     }
+    private void Start()
+    {
+        // Find the HeartDisplay in the scene
+        heartDisplay = FindObjectOfType<HeartDisplay>();
 
-//     public void EndGame(bool didWin)
-//     {
-//         if (didWin)
-//         {
-//             score++;
-//             popupManager.ShowPopup("You Win!", () =>
-//             {
-//                 sceneTransitionManager.LoadNextMiniGame();
-//             });
-//         }
-//         else
-//         {
-//             lives--;
-//             popupManager.ShowPopup("You Lose!", () =>
-//             {
-//                 if (lives > 0)
-//                 {
-//                     sceneTransitionManager.LoadNextMiniGame();
-//                 }
-//                 else
-//                 {
-//                     popupManager.ShowPopup("Game Over!", () =>
-//                     {
-//                         sceneTransitionManager.LoadMainMenu();
-//                     });
-//                 }
-//             });
-//         }
-//     }
-// }
+        // Initialize the heart display
+        //heartDisplay.UpdateHearts();
+    }
+
+    public void EndGame(bool didWin)
+    {
+        if (didWin)
+        {
+            score++;
+            popupManager.ShowPopup("You Win!", () =>
+            {
+                sceneTransitionManager.LoadNextMiniGame();
+            });
+        }
+        else
+        {
+            lives--;
+            //heartDisplay.UpdateHearts(); // Update hearts when lives change
+            popupManager.ShowPopup("You Lose!", () =>
+            {
+                if (lives > 0)
+                {
+                    sceneTransitionManager.LoadNextMiniGame();
+                }
+                else
+                {
+                    popupManager.ShowPopup("Game Over!", () =>
+                    {
+                        sceneTransitionManager.LoadMainMenu();
+                    });
+                }
+            });
+        }
+    }
+}
