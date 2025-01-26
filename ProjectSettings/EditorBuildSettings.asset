@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TypeGame/TypingGame.unity
     guid: a9465db3833a60e44b48fe2a7b76918f
+  - enabled: 1
+    path: Assets/DanceDance/DanceDance.unity
+    guid: ad245d45b57974758ad53990a5166602
   m_configObjects: {}
