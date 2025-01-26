@@ -76,11 +76,15 @@ public class TypeManager : MonoBehaviour
             // Trigger action if score reaches 80
             if (score >= 80)
             {
+                Debug.Log("Win");
+                allManager.winned = true;
                 allManager.LoadMainMenu();
             }
             else
             {
                 Debug.Log("Failed");
+                allManager.winned = false;
+                allManager.LoadMainMenu();
             }
         }
     }

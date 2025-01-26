@@ -27,6 +27,8 @@ public class AllManager : MonoBehaviour
     public int score = 0;
     public int lives = 3;
 
+    public bool winned = true;
+
     private void Awake()
     {
         // Singleton pattern to prevent duplicates
@@ -52,6 +54,14 @@ public class AllManager : MonoBehaviour
         Debug.Log($"Scene {scene.name} has been loaded.");
         if (scene.name == "LeadIn")
         {
+            if (!winned)
+            {
+                lives--;
+                if (lives == 0)
+                {
+                    Debug.Log("Outta Lives");
+                }
+            }
             LoadNextMiniGameWithDelay(1f);
             UpdateHearts();
         }
