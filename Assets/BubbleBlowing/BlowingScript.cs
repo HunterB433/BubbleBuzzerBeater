@@ -65,6 +65,7 @@ public class BlowingScript : MonoBehaviour
             {
                 thresholdUI.color = Color.green;
                 Debug.Log("Threshold reached for the required time!");
+                audioSource.Play();
                 // Trigger whatever event you want here
                 bubble.SetActive(true);
                 StartCoroutine(SayWellDone());
