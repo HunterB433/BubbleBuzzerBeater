@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -8,6 +9,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Vector2 boundaryMin; 
     [SerializeField] private Vector2 boundaryMax;
+    
+
+    private bool isSwimming;
     private void Update()
     {
         // Get player input
@@ -23,5 +27,23 @@ public class PlayerMove : MonoBehaviour
 
         // Apply the position
         transform.position = movePlayer;
+
+        // Get input (A/D or arrow keys)
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        // If there's input, play the walk animation
+        if (horizontalInput != 0 | verticalInput != 0) {
+            isSwimming = true;
+        } else {
+           isSwimming = false;
+        }
+
+
+
+    }
+
+    public bool IsSwimming() {
+        return isSwimming;
     }
 }
