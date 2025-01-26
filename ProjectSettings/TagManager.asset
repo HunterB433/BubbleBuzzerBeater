@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Anchor
   - Heart
+  - bubble
   layers:
   - Default
   - TransparentFX

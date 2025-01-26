@@ -565,6 +565,9 @@ MonoBehaviour:
   miniGameScenes:
   - BubbleWrap
   - TypingGame
+  - BubbleRun
+  - JumpScare
+  - DanceDance
   heartPrefab: {fileID: 4556051907251369890, guid: 7d59abd4c943a6d4095617dd85bf7b16, type: 3}
   spawnPoint: {x: 0, y: 0, z: -2}
   xOffset: 2

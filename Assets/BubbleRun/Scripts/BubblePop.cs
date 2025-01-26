@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class BubblePop : MonoBehaviour
 {
-    void OnTriggerEnter(Collider other)
+    
+    private int score = 0;
+    void OnTriggerEnter(Collider bubble)
     {
         // check if player is the collider
-        if (other.gameObject.CompareTag("Player"))
+        if (bubble.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
+            score++;
         }
     }
+
+    public int GetscoreBR()
+    {
+        return score;
+    }
+
+
 
 }
