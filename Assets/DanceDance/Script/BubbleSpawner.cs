@@ -10,8 +10,8 @@ public class BubbleSpawner : MonoBehaviour
     public TextMeshProUGUI targetText; // UI Text to display the target count
     public TextMeshProUGUI keyDisplayText; // UI Text to show the current key to press
 
-    private int bubbleCount = 0; // Counter for bubbles spawned
-    private int targetBubbleCount; // Target number of bubbles
+    public int bubbleCount = 0; // Counter for bubbles spawned
+    public int targetBubbleCount; // Target number of bubbles
     private string currentKey; // Current key that the user needs to press
 
     private readonly string[] keys = { "W", "Q", "E", "R" }; // Array of the possible keys
