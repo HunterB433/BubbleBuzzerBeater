@@ -25,6 +25,11 @@ public class LightSwitch : MonoBehaviour
     private bool monsterDownstairsAppeared;
     private bool showMonsterUpstairs = false;
 
+    // camera stuff
+    public GameObject image;
+    public RawImage rawImage;
+    private WebCamTexture webcamTexture;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,12 +38,35 @@ public class LightSwitch : MonoBehaviour
         // make sure light is on
         onSwitch.SetActive(true);
         lighting.SetActive(true);
+
+        // camera stuff
+        // Find the default webcam (can be adjusted if you have multiple webcams)
+        WebCamDevice[] devices = WebCamTexture.devices;
+        if (devices.Length > 0)
+        {
+            // Create a new WebCamTexture with the selected webcam device
+            webcamTexture = new WebCamTexture(devices[0].name);
+
+            // Assign the webcam feed to the RawImage texture
+            rawImage.texture = webcamTexture;
+
+            // Optionally, flip the image if needed (for proper orientation)
+            rawImage.rectTransform.localScale = new Vector3(-1, 1, 1);
+
+            // Start the webcam
+            webcamTexture.Play();
+
+            image.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("No webcam found.");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public void LightSwitched()
@@ -55,7 +83,7 @@ public class LightSwitch : MonoBehaviour
             if (monsterDownstairsAppeared)
             {
                 // decide if we want to show jumpscare
-                if (Random.value > 0.3)
+                if (Random.value > 0.2)
                 {
                     showMonsterUpstairs = true;
                     
@@ -70,7 +98,7 @@ public class LightSwitch : MonoBehaviour
             else if (openDoor.activeSelf)
             {
                 // randomize monster appearing
-                if (Random.value > 0.4)
+                if (Random.value > 0.3)
                 {
                     monsterDownstairs.SetActive(true);
                     monsterDownstairsAppeared = true;
@@ -82,7 +110,7 @@ public class LightSwitch : MonoBehaviour
                 }
             }
             // otherwise, decide if we want to open door
-            else if (Random.value > 0.5)
+            else if (Random.value > 0.4)
             {
                 // play open door sound
                 audioSource.PlayOneShot(doorOpen);
@@ -135,7 +163,45 @@ public class LightSwitch : MonoBehaviour
 
     IEnumerator EndGameScene()
     {
+        yield return new WaitForSeconds(1);
+
+        image.SetActive(true);
+
+        Capture();
+
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("LeadIn");
+    }
+
+    private IEnumerator SaveImage()
+    {
+        //Create a Texture2D with the size of the rendered image on the screen.
+        Texture2D texture = new Texture2D(rawImage.texture.width, rawImage.texture.height, TextureFormat.ARGB32, false);
+        //Save the image to the Texture2D
+        texture.SetPixels(webcamTexture.GetPixels());
+        //texture = RotateTexture(texture, -90);
+        texture.Apply();
+        yield return new WaitForEndOfFrame();
+
+        // save picture here ?
+
+        // To avoid memory leaks
+        Destroy(texture);
+
+        OnDisable();
+    }
+
+    public void Capture()
+    {
+        StartCoroutine(SaveImage());
+    }
+
+    void OnDisable()
+    {
+        // Stop the webcam when the script is disabled or the scene is changed
+        if (webcamTexture != null && webcamTexture.isPlaying)
+        {
+            webcamTexture.Stop();
+        }
     }
 }
