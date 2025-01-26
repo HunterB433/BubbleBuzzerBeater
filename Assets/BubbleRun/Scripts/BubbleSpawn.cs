@@ -13,6 +13,7 @@ public class BubbleSpawn : MonoBehaviour
     [SerializeField] private Vector3 spawnPosition = new Vector3(0, 0, 0);
     // spawn range
     [SerializeField] private float spawnRange = 5f;
+    
 
     private float timer;
 
@@ -25,6 +26,5 @@ public class BubbleSpawn : MonoBehaviour
             Instantiate(objectToSpawn, spawnPos, Quaternion.identity);
         }
     }
-
 
 }
