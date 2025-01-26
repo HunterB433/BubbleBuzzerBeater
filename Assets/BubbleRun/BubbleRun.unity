@@ -417,7 +417,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 3711721467799876344, guid: 76a5f9271d745b74e9ebfb82d764f2ff, type: 3}
   numOfObjects: 5
   spawnPosition: {x: 0, y: 0, z: -5}
-  spawnRange: 5
+  spawnRange: 4
 --- !u!114 &1619577061
 MonoBehaviour:
   m_ObjectHideFlags: 0

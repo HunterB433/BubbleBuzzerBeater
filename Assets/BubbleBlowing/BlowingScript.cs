@@ -96,5 +96,10 @@ public class BlowingScript : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         wellDoneText.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        AllManager.Instance.winned = true;
+        AllManager.Instance.LoadMainMenu();
     }
 }

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DanceDance/DanceDance.unity
     guid: ad245d45b57974758ad53990a5166602
+  - enabled: 1
+    path: Assets/Jumpscare/JumpScare.unity
+    guid: 4f80cf4a82fac9b4698b0c0df0c7523f
   m_configObjects: {}
