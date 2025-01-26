@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     public int score = 0;
     public int lives = 3;
 
+    private HeartDisplay heartDisplay;
+
     void Awake()
     {
         // Check if an instance already exists
@@ -22,11 +24,13 @@ public class GameController : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Make this GameObject persist across scenes
     }
 
-    // Add your other GameController logic here
-
     private void Start()
     {
-        // Initialize game state
+        // Find the HeartDisplay in the scene
+        heartDisplay = FindObjectOfType<HeartDisplay>();
+
+        // Initialize the heart display
+        //heartDisplay.UpdateHearts();
     }
 
     public void EndGame(bool didWin)
@@ -42,6 +46,7 @@ public class GameController : MonoBehaviour
         else
         {
             lives--;
+            //heartDisplay.UpdateHearts(); // Update hearts when lives change
             popupManager.ShowPopup("You Lose!", () =>
             {
                 if (lives > 0)
