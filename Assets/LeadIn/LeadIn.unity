@@ -527,10 +527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1548725277}
-  - component: {fileID: 1548725275}
-  - component: {fileID: 1548725274}
-  - component: {fileID: 1548725278}
-  - component: {fileID: 1548725279}
+  - component: {fileID: 1548725280}
   m_Layer: 0
   m_Name: AllManager
   m_TagString: Untagged
@@ -538,37 +535,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1548725274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548725273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cdc31ce8672d5143b02aff287333732, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popupManager: {fileID: 0}
-  sceneTransitionManager: {fileID: 1548725279}
-  score: 0
-  lives: 3
---- !u!114 &1548725275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548725273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58e23e1b932db594ba0ac10307c0e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popupPanel: {fileID: 0}
-  popupText: {fileID: 0}
-  displayTime: 2
 --- !u!4 &1548725277
 Transform:
   m_ObjectHideFlags: 0
@@ -584,7 +550,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1548725278
+--- !u!114 &1548725280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -593,30 +559,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1548725273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cc43216a8a28154494be97a6a683bf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heartPrefab: {fileID: 4556051907251369890, guid: 7d59abd4c943a6d4095617dd85bf7b16, type: 3}
-  spawnPoint: {x: 0, y: 0, z: -2}
-  xOffset: 2
-  gameController: {fileID: 1548725274}
---- !u!114 &1548725279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548725273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a84d77c65a34d24f871646c0e56fbfe, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d29a017a5705ec4ab357825a1133720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   miniGameScenes:
-  - BubbleBlowing
-  - BubbleRun
   - BubbleWrap
-  heartDisplay: {fileID: 1548725278}
+  - TypingGame
+  heartPrefab: {fileID: 4556051907251369890, guid: 7d59abd4c943a6d4095617dd85bf7b16, type: 3}
+  spawnPoint: {x: 0, y: 0, z: -2}
+  xOffset: 2
+  popupPanel: {fileID: 0}
+  popupText: {fileID: 0}
+  popupDisplayTime: 2
+  score: 0
+  lives: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
