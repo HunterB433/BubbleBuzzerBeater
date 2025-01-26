@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Buttons
+    uniqueID: 1220722917
+    locked: 0
+  - name: Player
+    uniqueID: 3508322213
+    locked: 0
