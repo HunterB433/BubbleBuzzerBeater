@@ -472,11 +472,20 @@ MonoBehaviour:
   - {fileID: 5088653943016163152, guid: 59a0bfebb71b23b47b3b37c00d0fa2e8, type: 3}
   - {fileID: 8163736175883226688, guid: ce226bf422d503a49b7a4aff50e3309b, type: 3}
   - {fileID: 1130137448611800167, guid: 331874e50b1ec5649b36d04c4f5e8e99, type: 3}
+  - {fileID: 6434337069734799747, guid: 185176ebbaaaa734e91057a9a9ce1ace, type: 3}
+  - {fileID: 1246688960186117942, guid: b7098deaa1b7d2546871ca55939b5f37, type: 3}
+  - {fileID: 9064539704153741326, guid: 3e6167a4c6dfe404dba599debb16b572, type: 3}
+  - {fileID: 5088653943016163152, guid: 59a0bfebb71b23b47b3b37c00d0fa2e8, type: 3}
+  - {fileID: 5237652203064268663, guid: ebd3f7e762ca80e49a4abe9dd03a4ff6, type: 3}
+  - {fileID: 1668941136218010133, guid: 7dbb08301ede17d4e88bf181fef54b7b, type: 3}
+  - {fileID: 8156766802809336450, guid: 394ac5c163b65a243b668cace08a9f6e, type: 3}
+  - {fileID: 8797329049851894457, guid: f0fd73753bd8dc742b73fc4819b65abb, type: 3}
   popupLocation: {x: 0, y: 1, z: -5}
   popupDisplayTime: 1
   score: 0
   lives: 3
   winned: 1
+  rollerCoasterImage: {fileID: 0}
 --- !u!1 &1824496938
 GameObject:
   m_ObjectHideFlags: 0

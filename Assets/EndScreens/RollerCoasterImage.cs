@@ -9,8 +9,15 @@ public class RollerCoasterImage : MonoBehaviour
 
     void Start()
     {
+        if (AllManager.Instance.rollerCoasterImage != null)
+        { 
         image = GetComponent<RawImage>();
 
         image.texture = AllManager.Instance.rollerCoasterImage;
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

@@ -22,7 +22,7 @@ public class BubbleRunWinner : MonoBehaviour
 
     void Update()
     {
-        if (scoreBR == 5)
+        if (scoreBR >= 5)
         {
             Debug.Log("END GAME");
             if (allManager != null)
