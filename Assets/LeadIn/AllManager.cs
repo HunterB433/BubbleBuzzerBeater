@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class AllManager : MonoBehaviour
 {
@@ -18,8 +19,8 @@ public class AllManager : MonoBehaviour
     public float xOffset = 2f;
 
     // Popup Management
-    public GameObject popupPanel;
-    public Text popupText;
+    public List<GameObject> popupPrefabs; // List of popup prefabs
+    public Vector3 popupLocation;        // Location where the popup will appear
     public float popupDisplayTime = 2f;
 
     // Game Controller
@@ -53,6 +54,18 @@ public class AllManager : MonoBehaviour
         {
             LoadNextMiniGameWithDelay(1f);
             UpdateHearts();
+        }
+
+        else if (scene.name == "BubbleWrap")
+        {
+            List<int> popupSequence = new List<int> { 0, 1 };
+            ShowPopupsSequentially(popupSequence);
+        }
+
+        else if (scene.name == "TypingGame")
+        {
+            List<int> popupSequence = new List<int> { 2, 3 };
+            ShowPopupsSequentially(popupSequence);
         }
     }
 
@@ -115,44 +128,84 @@ public class AllManager : MonoBehaviour
         if (didWin)
         {
             score++;
-            ShowPopup("You Win!", () =>
-            {
-                LoadNextMiniGame();
-            });
+            
+            
+            LoadNextMiniGame();
+           
         }
         else
         {
             lives--;
             UpdateHearts();
-            ShowPopup("You Lose!", () =>
+            
+            if (lives > 0)
             {
-                if (lives > 0)
-                {
-                    LoadNextMiniGame();
-                }
-                else
-                {
-                    ShowPopup("Game Over!", () =>
-                    {
-                        //LoadMainMenu();
-                    });
-                }
-            });
+                LoadNextMiniGame();
+            }
+            else
+            {
+                    
+            }
+            
         }
     }
 
     // Popup Management
-    public void ShowPopup(string message, Action onComplete)
+    public void ShowPopupsSequentially(List<int> popupIndices)
     {
-        popupPanel.SetActive(true);
-        popupText.text = message;
-        StartCoroutine(DisplayPopup(onComplete));
+        StartCoroutine(DisplayPopupsSequentially(popupIndices));
     }
 
-    private IEnumerator DisplayPopup(Action onComplete)
+    private IEnumerator DisplayPopupsSequentially(List<int> popupIndices)
     {
-        yield return new WaitForSeconds(popupDisplayTime);
-        popupPanel.SetActive(false);
-        onComplete?.Invoke();
+        foreach (int popupIndex in popupIndices)
+        {
+            // Show the current popup
+            ShowPopup(popupIndex);
+
+            // Wait for the duration of the popup display before showing the next one
+            yield return new WaitForSeconds(popupDisplayTime);
+        }
     }
+
+    public void ShowPopup(int popupIndex)
+    {
+        if (popupIndex < 0 || popupIndex >= popupPrefabs.Count)
+        {
+            Debug.LogWarning("Invalid popup index");
+            return;
+        }
+
+        // Instantiate the selected popup prefab
+        GameObject popup = Instantiate(popupPrefabs[popupIndex], popupLocation, Quaternion.identity);
+
+        // Set the popup's initial size
+        popup.transform.localScale = Vector3.one;
+
+        // Start the popup animation coroutine
+        StartCoroutine(AnimatePopup(popup));
+    }
+
+    private IEnumerator AnimatePopup(GameObject popup)
+    {
+        float elapsedTime = 0f;
+        Vector3 startScale = Vector3.one;               // Initial size
+        Vector3 endScale = new Vector3(50f, 50f, 50f);  // Final size
+
+        // Gradually scale the popup
+        while (elapsedTime < popupDisplayTime)
+        {
+            float progress = elapsedTime / popupDisplayTime;
+            popup.transform.localScale = Vector3.Lerp(startScale, endScale, progress);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // Ensure final size is set
+        popup.transform.localScale = endScale;
+
+        // Destroy the popup after the animation
+        Destroy(popup);
+    }
+
 }

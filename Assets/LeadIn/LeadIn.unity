@@ -568,9 +568,13 @@ MonoBehaviour:
   heartPrefab: {fileID: 4556051907251369890, guid: 7d59abd4c943a6d4095617dd85bf7b16, type: 3}
   spawnPoint: {x: 0, y: 0, z: -2}
   xOffset: 2
-  popupPanel: {fileID: 0}
-  popupText: {fileID: 0}
-  popupDisplayTime: 2
+  popupPrefabs:
+  - {fileID: 1529930864862564645, guid: 3fe8cab9e7ffc874f9a1a6ffd62d295a, type: 3}
+  - {fileID: 5088653943016163152, guid: 59a0bfebb71b23b47b3b37c00d0fa2e8, type: 3}
+  - {fileID: 8163736175883226688, guid: ce226bf422d503a49b7a4aff50e3309b, type: 3}
+  - {fileID: 1130137448611800167, guid: 331874e50b1ec5649b36d04c4f5e8e99, type: 3}
+  popupLocation: {x: 0, y: 1, z: -5}
+  popupDisplayTime: 1
   score: 0
   lives: 3
 --- !u!1660057539 &9223372036854775807

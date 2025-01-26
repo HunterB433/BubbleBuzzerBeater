@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/LeadIn/LeadIn.unity
     guid: 20a3ab6def893f040b094ff3e0bad695
   - enabled: 1
-    path: Assets/BubbleWrapGame/Scenes/BubbleWrap.unity
+    path: Assets/BubbleWrap/Scenes/BubbleWrap.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/BubbleRun/BubbleRun.unity
