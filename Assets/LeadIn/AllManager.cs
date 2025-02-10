@@ -31,6 +31,10 @@ public class AllManager : MonoBehaviour
 
     public Texture2D rollerCoasterImage;
 
+    // Game Controller Overrride
+    public bool overrideBool = false;
+    public int overrideIndex = 0;
+
     private void Awake()
     {
         // Singleton pattern to prevent duplicates
@@ -140,10 +144,15 @@ public class AllManager : MonoBehaviour
     private int GetRandomSceneIndex()
     {
         int randomIndex;
-        do
+
+        if (!overrideBool)
         {
-            randomIndex = UnityEngine.Random.Range(0, miniGameScenes.Length);
-        } while (randomIndex == lastSceneIndex);
+            do
+            {
+                randomIndex = UnityEngine.Random.Range(0, miniGameScenes.Length);
+            } while (randomIndex == lastSceneIndex);
+        }
+        else { randomIndex = overrideIndex; }
         return randomIndex;
     }
 

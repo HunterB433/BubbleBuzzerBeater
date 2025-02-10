@@ -17,6 +17,7 @@ public class BubblePop : MonoBehaviour
 
     void OnTriggerEnter(Collider bubble)
     {
+        Debug.Log("Bonk");
         if (bubble.gameObject.CompareTag("Player"))
         {
             bubbleRunWinner.scoreBR++;
