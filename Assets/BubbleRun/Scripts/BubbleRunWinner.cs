@@ -12,7 +12,7 @@ public class BubbleRunWinner : MonoBehaviour
     {
         allManager = FindObjectOfType<AllManager>();
         scoreBR = 0;
-        Debug.LogError("Initial score: " + scoreBR);
+        Debug.Log("Initial score: " + scoreBR);
 
         if (allManager == null)
         {
